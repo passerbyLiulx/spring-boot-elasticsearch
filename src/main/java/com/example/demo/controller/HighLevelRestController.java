@@ -97,7 +97,7 @@ public class HighLevelRestController {
             bookDtoList.add(JSON.parseObject(searchHit.getSourceAsString(), BookDto.class));
         }
         // 封装Map参数返回
-        Map<String, Object> result = new HashMap<String, Object>(16);
+        Map<String, Object> result = new HashMap<>(16);
         result.put("count", total);
         result.put("data", bookDtoList);
         return new ResponseBean(HttpStatus.OK.value(), "查询成功", result);

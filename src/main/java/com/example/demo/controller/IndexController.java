@@ -12,11 +12,8 @@ public class IndexController {
 
     /**
      * 通用页面跳转
-     *
      * @param url
-     * @return java.lang.String
-     * @author wliduo[i@dolyw.com]
-     * @date 2019/1/24 19:27
+     * @return
      */
     @RequestMapping("{url}.shtml")
     public String page(@PathVariable("url") String url) {
@@ -25,12 +22,9 @@ public class IndexController {
 
     /**
      * 通用页面跳转(二级目录)
-     *
      * @param module
-	 * @param url
-     * @return java.lang.String
-     * @author wliduo[i@dolyw.com]
-     * @date 2019/1/24 19:27
+     * @param url
+     * @return
      */
     @RequestMapping("{module}/{url}.shtml")
     public String page(@PathVariable("module") String module, @PathVariable("url") String url) {
@@ -39,12 +33,10 @@ public class IndexController {
 
     /**
      * 通用页面跳转(三级目录)
-     *
      * @param module
-	 * @param url
-     * @return java.lang.String
-     * @author wliduo[i@dolyw.com]
-     * @date 2019/1/25 19:35
+     * @param module2
+     * @param url
+     * @return
      */
     @RequestMapping("{module}/{module2}/{url}.shtml")
     public String page(@PathVariable("module") String module, @PathVariable("module2") String module2,
